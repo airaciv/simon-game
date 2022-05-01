@@ -66,7 +66,7 @@ function playSound(name) {
 let level = 0;
 let started = false;
 
-$(document).keypress(function () {
+$("#level-title").click(function () {
   if (!started) {
     nextSequence();
     started = true;
@@ -91,7 +91,7 @@ function checkAnswer(currentLevel) {
 
       playSound("wrong");
 
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over, Click Here to Restart");
       startOver();
     }
   }
